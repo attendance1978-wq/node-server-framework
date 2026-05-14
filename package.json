@@ -59,7 +59,9 @@
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "package": "vsce package",
-    "publish": "vsce publish"
+    "publish": "vsce publish",
+    "test": "node --test test/*.js",
+    "test:watch": "node --test --watch test/*.js"
   },
   "devDependencies": {
     "@types/vscode": "^1.85.0",
