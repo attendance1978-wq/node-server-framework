@@ -1,4 +1,8 @@
-# My Server Framework
+# Node.js Server Framework
+
+[![GitHub license](https://img.shields.io/github/license/attendance1978-wq/node-server-framework)](https://github.com/attendance1978-wq/node-server-framework/blob/main/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/attendance1978-wq/node-server-framework)](https://github.com/attendance1978-wq/node-server-framework/stargazers)
+[![Node.js Version](https://img.shields.io/badge/node-%3E%3D14.0.0-brightgreen)](https://nodejs.org/)
 
 A lightweight, Express-like Node.js server framework built from scratch.
 
