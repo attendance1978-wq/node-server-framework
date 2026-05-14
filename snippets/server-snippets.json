@@ -1,0 +1,71 @@
+{
+  "Create Server Instance": {
+    "prefix": "server-init",
+    "body": [
+      "import Server from 'my-server-framework';",
+      "",
+      "const app = new Server();",
+      "",
+      "app.listen(${1:3000}, () => {",
+      "    console.log(`Server running on port ${1:3000}`);",
+      "});"
+    ],
+    "description": "Initialize a new server instance"
+  },
+  "Create GET Route": {
+    "prefix": "server-get",
+    "body": [
+      "app.get('${1:/api/route}', (req, res) => {",
+      "    res.json({",
+      "        message: 'GET request successful',",
+      "        params: req.params,",
+      "        query: req.query",
+      "    });",
+      "});"
+    ],
+    "description": "Create a GET route"
+  },
+  "Create POST Route": {
+    "prefix": "server-post",
+    "body": [
+      "app.post('${1:/api/route}', (req, res) => {",
+      "    const data = req.body;",
+      "    res.status(201).json({",
+      "        message: 'Resource created',",
+      "        data: data",
+      "    });",
+      "});"
+    ],
+    "description": "Create a POST route"
+  },
+  "Add Middleware": {
+    "prefix": "server-middleware",
+    "body": [
+      "app.use('${1:/api}', (req, res, next) => {",
+      "    console.log(`Middleware executing for ${req.pathname}`);",
+      "    next();",
+      "});"
+    ],
+    "description": "Add middleware to the server"
+  },
+  "Serve Static Files": {
+    "prefix": "server-static",
+    "body": [
+      "app.static('${1:/public}', '${2:./public}');"
+    ],
+    "description": "Serve static files from a directory"
+  },
+  "Route with Parameters": {
+    "prefix": "server-params",
+    "body": [
+      "app.get('${1:/api/users/:id}', (req, res) => {",
+      "    const { id } = req.params;",
+      "    res.json({",
+      "        id: id,",
+      "        message: `Getting user with ID: {id}`",
+      "    });",
+      "});"
+    ],
+    "description": "Create a route with URL parameters"
+  }
+}
