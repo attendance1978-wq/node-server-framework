@@ -1,72 +1,13 @@
 {
-  "name": "node-server-framework",
-  "displayName": "Node.js Server Framework",
-  "description": "A lightweight Node.js server framework with routing, middleware, and static file serving",
+  "name": "@attendance1978-wq/node-server-framework",
   "version": "1.0.0",
-  "publisher": "attendance1978-wq",
-  "engines": {
-    "vscode": "^1.85.0"
+  "main": "index.js",
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   },
-  "categories": [
-    "Snippets",
-    "Other"
-  ],
-  "keywords": [
-    "nodejs",
-    "server",
-    "framework",
-    "http",
-    "api",
-    "rest"
-  ],
-  "activationEvents": [
-    "onLanguage:javascript",
-    "onLanguage:typescript"
-  ],
-  "main": "./extension.js",
-  "contributes": {
-    "snippets": [
-      {
-        "language": "javascript",
-        "path": "./snippets/server-snippets.json"
-      }
-    ],
-    "commands": [
-      {
-        "command": "serverFramework.createProject",
-        "title": "Create New Server Framework Project"
-      },
-      {
-        "command": "serverFramework.addRoute",
-        "title": "Add New Route"
-      },
-      {
-        "command": "serverFramework.addMiddleware",
-        "title": "Add Middleware"
-      }
-    ],
-    "menus": {
-      "explorer/context": [
-        {
-          "command": "serverFramework.createProject",
-          "group": "create"
-        }
-      ]
-    }
-  },
-  "scripts": {
-    "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
-    "package": "vsce package",
-    "publish": "vsce publish",
-    "test": "node --test test/*.js",
-    "test:watch": "node --test --watch test/*.js"
-  },
-  "devDependencies": {
-    "@types/vscode": "^1.85.0",
-    "@types/node": "^20.x",
-    "typescript": "^5.3.0",
-    "@vscode/vsce": "^2.22.0"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/attendance1978-wq/node-server-framework.git"
   }
 }
